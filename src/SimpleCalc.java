@@ -16,21 +16,20 @@ public class SimpleCalc {
     public int sum() {
         return a + b;
     }
-
-    public void getInput() {
-        Scanner reader = new Scanner(System.in);  // Reading from System.in
-        System.out.println("Enter the first number: ");
-        a = reader.nextInt(); // Scans the next token of the input as an int.
-//once finished
-        System.out.println("Enter the second number: ");
-        b = reader.nextInt(); // Scans the next token of the input as an int.
-//once finished
-        reader.close();
+    
+    public void getInput()
+    {
+        Console.WriteLine("Enter the first number: ");
+        a = Convert.ToInt32(Console.ReadLine()); // Scans the next token of the input as an int.
+                                                 //once finished
+        Console.WriteLine("Enter the second number: ");
+        b = Convert.ToInt32(Console.ReadLine()); // Scans the next token of the input as an int.
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         SimpleCalc calc = new SimpleCalc();
-        System.out.println(calc.sum());
+        Console.WriteLine(calc.sum());
     }
 }
 
